@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const dataRoutes = require("./routes/dataRoutes");
 const views = require("./views/views.js");
 
-const cron = require("./utils/cron");
+const cronJobs = require("./utils/cron");
 
 const app = express();
 const port = process.env.PORT;
@@ -16,7 +16,7 @@ app.use(
 app.use("/", views);
 app.use("/api", dataRoutes);
 
-cron();
+cronJobs();
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
