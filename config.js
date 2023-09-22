@@ -53,8 +53,8 @@ module.exports = {
   },
 
   cronFetchApiWeather: {
-    hour: 14,
-    minute: 40,
+    hour: 13,
+    minute: 12,
   },
 
   //Irigation configuration
