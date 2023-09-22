@@ -1,0 +1,21 @@
+PORT=3000
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=
+MYSQL_DATABASE=bart2020_07
+
+
+SONOFF_EMAIL=kalinowskibartosz@gmail.com
+SONOFF_PW=Ziomuss137
+SONOFF_REGION=eu
+RAIN_SENSOR_START_STATUS=on
+
+MYSQL_DB_WEATHER_CURRENT_DATA=weather_current_data
+MYSQL_DB_WEATHER_HISTORY_DATA=weather_history_data
+MYSQL_DB_WEATHER_FORECAST_DATA=weather_forecast_data
+
+//X-RapidAPI-Key
+API_WEATHER_KEY=7129cf26f7mshd181d7c72a107f5p1d9cabjsn509f4c51447c
+API_WEATHER_HOST=weatherapi-com.p.rapidapi.com
+// Latitude and Longitude 
+API_WEATHER_POSITIONS=52.4175523,16.629527
