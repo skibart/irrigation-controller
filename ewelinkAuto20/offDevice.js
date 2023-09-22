@@ -1,7 +1,7 @@
-const { client } = require("./clientEwelink20");
+const { createClient } = require("./clientEwelink20");
 
 async function offDevice(deviceID) {
-  console.log(client);
+  const client = await createClient();
   const info = await client.device.setThingStatus({
     type: 1,
     id: deviceID,

@@ -74,7 +74,7 @@ module.exports = {
   },
   irrigationZones: {
     zone: 4,
-    zone1time: 1,
+    zone1time: 2,
     zone2time: 1,
     zone3time: 1,
     zone4time: 1,

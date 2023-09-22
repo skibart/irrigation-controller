@@ -1,9 +1,10 @@
-const { client } = require("./clientEwelink20");
+const { createClient } = require("./clientEwelink20");
 
 async function multiChannelDevice(
   deviceID,
   { ch1 = "off", ch2 = "off", ch3 = "off", ch4 = "off" }
 ) {
+  const client = await createClient();
   await client.device.setThingStatus({
     type: 1,
     id: deviceID,

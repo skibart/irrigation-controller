@@ -1,6 +1,7 @@
-const { client } = require("./clientEwelink20");
+const { createClient } = require("./clientEwelink20");
 
 async function toggleDevice(deviceID) {
+  const client = await createClient();
   const response = await client.device.getThingStatus({
     id: deviceID,
     type: 1,
