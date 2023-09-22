@@ -6,12 +6,9 @@ const { insterWeatherHistoryToDb } = require("../utils/insterFetchToDb");
 const { insterCurrentWeatherToDb } = require("../utils/insterFetchToDb");
 
 function cronJobs() {
-  const hour = config.cronFetchApiWeather.hour;
-  const minute = config.cronFetchApiWeather.minute;
-
-  cron.schedule(`${minute} ${hour} * * *`, insterForecastToDb);
-  cron.schedule(`${minute} ${hour} * * *`, insterWeatherHistoryToDb);
-  cron.schedule(`${minute} ${hour} * * *`, insterCurrentWeatherToDb);
+  cron.schedule(`14 55 * * *`, insterForecastToDb);
+  cron.schedule(`14 56 * * *`, insterWeatherHistoryToDb);
+  cron.schedule(`14 57 * * *`, insterCurrentWeatherToDb);
 }
 
 module.exports = {
