@@ -5,6 +5,7 @@ const dataRoutes = require("./routes/dataRoutes");
 const views = require("./views/views.js");
 
 const { cronJobs } = require("./utils/cron");
+const { sensorRain } = require("./ewelinkModule/sensorRain");
 
 const app = express();
 const port = process.env.PORT;
@@ -17,6 +18,7 @@ app.use("/", views);
 app.use("/api", dataRoutes);
 
 cronJobs();
+sensorRain();
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
