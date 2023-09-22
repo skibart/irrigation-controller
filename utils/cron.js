@@ -9,12 +9,9 @@ function cronJobs() {
   const hour = config.cronFetchApiWeather.hour;
   const minute = config.cronFetchApiWeather.minute;
 
-  cron.schedule(`05 15 * * *`, insterForecastToDb);
-  cron.schedule(`06 15 * * *`, insterWeatherHistoryToDb);
-  cron.schedule(`07 15 * * *`, insterCurrentWeatherToDb);
-  cron.schedule(`05 13 * * *`, insterCurrentWeatherToDb);
-  cron.schedule(`06 13 * * *`, insterCurrentWeatherToDb);
-  cron.schedule(`07 13 * * *`, insterCurrentWeatherToDb);
+  cron.schedule(`15 13 * * *`, insterForecastToDb);
+  cron.schedule(`20 13 * * *`, insterWeatherHistoryToDb);
+  cron.schedule(`25 13 * * *`, insterCurrentWeatherToDb);
 }
 
 module.exports = {
