@@ -24,7 +24,7 @@ app.use(
 app.use("/", views);
 app.use("/api", dataRoutes);
 
-// cronJobs();
+cronJobs();
 // sensorRain();
 // multiChannelDevice("100186b2a2", { ch2: "off" });
 // infoDevice("1001e7c86f");
@@ -32,7 +32,7 @@ app.use("/api", dataRoutes);
 // offDevice("1001e7c86f");
 // valveToggle("1001e7c86f", "close");
 // onDevice("100175830f");
-irrgationProccess();
+// irrgationProccess();
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
