@@ -3,15 +3,7 @@ const router = express.Router();
 
 const { getAmountOfRainFall } = require("../controllers/controller");
 const { getForecast } = require("../controllers/controller");
-
-router.get("/", async (req, res) => {
-  try {
-    const info = "no DATA API at this moment";
-    res.send(info);
-  } catch (error) {
-    res.send(error);
-  }
-});
+const { getCurrentWeather } = require("../controllers/controller");
 
 router.get("/rainfall/:id", async (req, res) => {
   try {
@@ -25,10 +17,12 @@ router.get("/rainfall/:id", async (req, res) => {
   }
 });
 
-router.get("/currentweather/", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const data2 = await getForecast();
-    res.json({ data2 });
+    const forecast = await getForecast();
+    const rainAmount2Days = await getAmountOfRainFall(2);
+    const currentWeather = await getCurrentWeather();
+    res.json({ currentWeather, forecast, rainAmount2Days });
   } catch (error) {
     console.error(error);
     res
