@@ -25,7 +25,7 @@ app.use("/", views);
 app.use("/api", dataRoutes);
 
 cronJobs();
-// sensorRain();
+sensorRain();
 // multiChannelDevice("100186b2a2", { ch2: "off" });
 // infoDevice("1001e7c86f");
 // onDevice("1001e7c86f");
