@@ -49,7 +49,7 @@ module.exports = {
   api: {
     apiKey: process.env.API_WEATHER_KEY || "fdgfdgfdg455c3csdfcasdc",
     apiUrl: process.env.API_WEATHER_HOST || "weatherapi-com.p.rapidapi.com",
-    apiPostion: process.env.API_WEATHER_POSITIONS || "50.123,19.321",
+    apiPostion: process.env.API_WEATHER_POSITIONS || "46.583206, 12.192010",
   },
 
   cronFetchApiWeather: {
