@@ -48,4 +48,8 @@ Before starting the irrigation process, the application performs the following c
 
 This app allows you to set up different irrigation schedules and parameters for each zone in your lawn or garden. You can achieve precise control over when and how much each area gets watered, ensuring efficient use of resources.
 
+## Deployment on AWS
+
+This application has been thoroughly tested and is working perfectly on an AWS environment. It is hosted on a Node.js server and utilizes a MySQL database for data storage.
+
 Feel free to customize the app according to your specific needs, and enjoy a smarter and more efficient irrigation system for your home or garden.
