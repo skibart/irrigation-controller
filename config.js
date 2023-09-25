@@ -47,7 +47,7 @@ module.exports = {
 
   // API configuration
   api: {
-    apiKey: process.env.API_WEATHER_KEY || "fdgfdgfdg455c3csdfcasdc",
+    apiKey: process.env.API_WEATHER_KEY || "",
     apiUrl: process.env.API_WEATHER_HOST || "weatherapi-com.p.rapidapi.com",
     apiPostion: process.env.API_WEATHER_POSITIONS || "46.583206, 12.192010",
   },
