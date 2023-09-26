@@ -11,9 +11,10 @@ module.exports = {
   },
 
   ewelinkApi: {
-    appId: "3OgcAwtganOmuOn5VdC6wYM3FaMnFUN2",
-    appSecret: "abe7lktOTIjRmCMUI5uX46jh9ho2YlHH",
-    region: "eu",
+    appId: process.env.SONOFF_APP_ID,
+    appSecret: process.env.SONOFF_APP_SECRET,
+    region: process.env.SONOFF_REGION,
+    redirectURL: "http://irrigation.maihom.ovh/gettoken/redirectUrl",
   },
 
   dbTableName: {

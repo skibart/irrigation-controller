@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 
 const dataRoutes = require("./routes/dataRoutes");
+const tokenRoute = require("./routes/tokenRoute");
 const views = require("./views/views.js");
 
 const { cronJobs } = require("./utils/cron");
@@ -23,6 +24,7 @@ app.use(
 
 app.use("/", views);
 app.use("/api", dataRoutes);
+app.use("/gettoken", tokenRoute);
 
 cronJobs();
 sensorRain();
