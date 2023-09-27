@@ -20,7 +20,7 @@ function createClient() {
 
   async function refreshToken() {
     let LoggedInfo = JSON.parse(fs.readFileSync("token2.json", "utf-8"));
-    // console.info(LoggedInfo);
+    console.info(LoggedInfo);
     client.at = LoggedInfo.data?.accessToken;
     client.region = LoggedInfo?.region || "eu";
     client.setUrl(LoggedInfo?.region || "eu");
@@ -38,7 +38,7 @@ function createClient() {
         // You can also use built-in storage
         // client.storage.set('token', {...})
         fs.writeFileSync(
-          "./token.json",
+          "./token2.json",
           JSON.stringify({
             status: 200,
             responseTime: 0,
