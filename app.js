@@ -28,6 +28,16 @@ app.use("/api", dataRoutes);
 app.use("/token", tokenShow);
 app.use("/gettoken", tokenRoute);
 
+app.get("/tokenread", async (req, res) => {
+  try {
+    const data = await fs.readFileSync("token.json");
+    res.send(data);
+  } catch (error) {
+    console.error("Error creating show token URL:", error);
+    res.status(500).send("Error showing token");
+  }
+});
+
 // cronJobs();
 // sensorRain();
 // multiChannelDevice("100186b2a2", { ch2: "off" });
