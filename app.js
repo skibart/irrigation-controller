@@ -30,7 +30,7 @@ app.use("/gettoken", tokenRoute);
 // sensorRain();
 // multiChannelDevice("100186b2a2", { ch2: "off" });
 // infoDevice("1001e7c86f");
-onDevice("10015a1c76");
+// onDevice("10015a1c76");
 // offDevice("1001e7c86f");
 // valveToggle("1001e7c86f", "close");
 // onDevice("100175830f");
