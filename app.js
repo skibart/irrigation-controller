@@ -3,6 +3,7 @@ const morgan = require("morgan");
 
 const dataRoutes = require("./routes/dataRoutes");
 const tokenRoute = require("./routes/tokenRoute");
+const controlRoute = require("./routes/controlRoute");
 const views = require("./views/views.js");
 
 const { cronJobs } = require("./utils/cron");
@@ -25,6 +26,7 @@ app.use(
 app.use("/", views);
 app.use("/api", dataRoutes);
 app.use("/gettoken", tokenRoute);
+app.use("/control", controlRoute);
 
 // cronJobs();
 // sensorRain();
@@ -33,7 +35,7 @@ app.use("/gettoken", tokenRoute);
 // onDevice("10015a1c76");
 // offDevice("1001e7c86f");
 // valveToggle("1001e7c86f", "close");
-onDevice("10015a1c76");
+// onDevice("10015a1c76");
 // irrgationProccess();
 
 app.listen(port, () => {
