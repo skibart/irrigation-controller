@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("koa-bodyparser");
 const fs = require("fs");
+const path = require("path");
 const {
   client,
   redirectUrl,
@@ -39,10 +40,16 @@ router.get("/redirectUrl", async (req, res) => {
     });
 
     response.region = region;
+    const filename = "token.json";
+    const filePath = path.resolve(process.cwd(), filename);
+    fs.writeFileSync(filePath, JSON.stringify(response));
+    const responseData = {
+      response,
+      filePath,
+    };
 
-    fs.writeFileSync("token.json", JSON.stringify(response));
+    res.send(responseData);
     console.log("Token response:", response);
-    res.send(response);
   } catch (error) {
     console.error("Error handling redirect:", error);
     res.status(500).send("Error handling redirect");
