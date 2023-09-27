@@ -24,7 +24,7 @@ function createClient() {
     client.at = LoggedInfo.data?.accessToken;
     client.region = LoggedInfo?.region || "eu";
     client.setUrl(LoggedInfo?.region || "eu");
-    // Check if the token has expired, and refresh the token if it has expired
+    // Check if the token has expired, and refresh the token if it has expired...
     if (
       LoggedInfo.data?.atExpiredTime < Date.now() &&
       LoggedInfo.data?.rtExpiredTime > Date.now()
