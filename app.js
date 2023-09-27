@@ -1,7 +1,5 @@
 const express = require("express");
 const morgan = require("morgan");
-const fs = require("fs");
-const bodyParser = require("koa-bodyparser");
 
 const dataRoutes = require("./routes/dataRoutes");
 const tokenRoute = require("./routes/tokenRoute");
@@ -29,16 +27,6 @@ app.use("/", views);
 app.use("/api", dataRoutes);
 app.use("/token", tokenShow);
 app.use("/gettoken", tokenRoute);
-
-app.get("/tokenread", async (req, res) => {
-  try {
-    const data = fs.readFileSync("test.json");
-    res.json({ data: JSON.parse(data) });
-  } catch (error) {
-    console.error("Error creating show token URL:", error);
-    res.status(500).send("Error showing token");
-  }
-});
 
 // cronJobs();
 // sensorRain();
