@@ -30,7 +30,7 @@ app.use("/gettoken", tokenRoute);
 
 app.get("/tokenread", async (req, res) => {
   try {
-    const data = await fs.readFileSync("token.json");
+    const data = await fs.readFileSync("/token.json");
     res.send(data);
   } catch (error) {
     console.error("Error creating show token URL:", error);
