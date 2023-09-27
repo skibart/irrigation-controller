@@ -26,11 +26,11 @@ app.use("/", views);
 app.use("/api", dataRoutes);
 app.use("/gettoken", tokenRoute);
 
-cronJobs();
-sensorRain();
+// cronJobs();
+// sensorRain();
 // multiChannelDevice("100186b2a2", { ch2: "off" });
 // infoDevice("1001e7c86f");
-// onDevice("1001e7c86f");
+onDevice("10015a1c76");
 // offDevice("1001e7c86f");
 // valveToggle("1001e7c86f", "close");
 // onDevice("100175830f");
