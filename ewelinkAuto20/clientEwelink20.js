@@ -14,12 +14,12 @@ function createClient() {
   const client = new eWeLink.WebAPI(_config);
 
   // If the file does not exist, directly report an error
-  if (!fs.existsSync("./token.json")) {
+  if (!fs.existsSync("token2.json")) {
     throw new Error("token.json not found, please run login.js first");
   }
 
   async function refreshToken() {
-    let LoggedInfo = JSON.parse(fs.readFileSync("./token.json", "utf-8"));
+    let LoggedInfo = JSON.parse(fs.readFileSync("token2.json", "utf-8"));
     // console.info(LoggedInfo);
     client.at = LoggedInfo.data?.accessToken;
     client.region = LoggedInfo?.region || "eu";
