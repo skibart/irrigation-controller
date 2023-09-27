@@ -40,7 +40,7 @@ router.get("/redirectUrl", async (req, res) => {
     });
 
     response.region = region;
-    const filename = "token.json";
+    const filename = "test.json";
     const filePath = path.resolve(process.cwd(), filename);
     fs.writeFileSync(filePath, JSON.stringify(response));
     const responseData = {
