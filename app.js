@@ -33,7 +33,7 @@ app.use("/gettoken", tokenRoute);
 // onDevice("10015a1c76");
 // offDevice("1001e7c86f");
 // valveToggle("1001e7c86f", "close");
-// onDevice("100175830f");
+onDevice("10015a1c76");
 // irrgationProccess();
 
 app.listen(port, () => {

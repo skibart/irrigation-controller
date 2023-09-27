@@ -53,7 +53,7 @@ function createClient() {
             region: client.region,
           })
         );
-        LoggedInfo = JSON.parse(fs.readFileSync("./token.json", "utf-8"));
+        LoggedInfo = JSON.parse(fs.readFileSync("token2.json", "utf-8"));
       }
     }
 
