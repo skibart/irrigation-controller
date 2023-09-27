@@ -6,7 +6,7 @@ const tokenShow = express.Router();
 
 tokenShow.get("/", async (req, res) => {
   try {
-    const data = fs.readFileSync("../token.json", "utf8");
+    const data = await fs.readFileSync("../token.json");
     res.send(data);
   } catch (error) {
     console.error("Error creating show token URL:", error);
