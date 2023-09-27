@@ -3,7 +3,6 @@ const morgan = require("morgan");
 
 const dataRoutes = require("./routes/dataRoutes");
 const tokenRoute = require("./routes/tokenRoute");
-const tokenShow = require("./routes/tokenShow");
 const views = require("./views/views.js");
 
 const { cronJobs } = require("./utils/cron");
@@ -25,7 +24,6 @@ app.use(
 
 app.use("/", views);
 app.use("/api", dataRoutes);
-app.use("/token", tokenShow);
 app.use("/gettoken", tokenRoute);
 
 // cronJobs();
